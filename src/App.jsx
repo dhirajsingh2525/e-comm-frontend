@@ -6,6 +6,7 @@ import { useDispatch } from 'react-redux';
 import { addUser, removeUser } from './reducers/userSlice';
 import { addSeller, removeSeller } from './reducers/sellerSlice';
 import Navbar from './components/Navbar';
+import { useState } from 'react';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -32,7 +33,7 @@ const App = () => {
   
   return (
     <div>
-      <Navbar />
+
       <Mroutes />
     </div>
   )

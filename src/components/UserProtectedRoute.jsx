@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { Navigate } from 'react-router-dom';
 
-const CommonProtectedRoute = ({ children }) => {
+const UserProtectedRoute = ({ children }) => {
   const { user, isLoggedin, isLoading } = useSelector((state) => state.auth);
 
 
@@ -14,4 +14,4 @@ const CommonProtectedRoute = ({ children }) => {
   return <Navigate to="/login" replace />;
 };
 
-export default CommonProtectedRoute;
+export default UserProtectedRoute;

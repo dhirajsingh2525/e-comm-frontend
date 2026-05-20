@@ -265,7 +265,7 @@ const ProductDetailPage = () => {
                   <button 
                    onClick={handlePayment}
                   className="w-full bg-gray-900 hover:bg-gray-800 text-white py-3 px-6 rounded-lg font-semibold transition-colors">
-                    Buy Now
+                    Pay Now
                   </button>
                    <button 
                    onClick={handleOrder}

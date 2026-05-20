@@ -1,9 +1,10 @@
 import { axiosInstance } from "../config/AxiosInstance"
 
 
-export const fetchAllProducts = async () =>{
+export const fetchAllProducts = async (search) =>{
     try {
-          const response = await axiosInstance.get("/")
+          const response = await axiosInstance.get(`/?search=${search}`)
+
           if(response){
           return response.data.products
           }

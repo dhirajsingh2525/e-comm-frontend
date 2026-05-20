@@ -6,12 +6,14 @@ import { logoutAllUsers } from "../apis/AuthApis";
 import { Search, ShoppingCart, User, Menu, X, Store } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({search, setSearch}) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
    const { isLoggedin,user } = useSelector((state) => state.auth);
   const { isSellerLoggedin, seller } = useSelector((state) => state.authSeller);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+
 
   const loggedin = isLoggedin || isSellerLoggedin;
   const allUsers = user || seller
@@ -47,13 +49,15 @@ const Navbar = () => {
             </div>
           </div>
 
-          <div className="hidden md:flex flex-1 max-w-2xl mx-8">
+          <div className="md:flex flex-1 max-w-2xl mx-8">
             <div className="relative w-full">
               <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                 <Search className="h-5 w-5 text-gray-400" />
               </div>
               <input
                 type="text"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search for products, brands and more..."
                 className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl py-3 pl-12 pr-4 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-200 hover:bg-white/15"
               />
@@ -139,6 +143,8 @@ const Navbar = () => {
             </div>
             <input
               type="text"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
               placeholder="Search products..."
               className="w-full bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl py-3 pl-10 pr-4 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-200"
             />

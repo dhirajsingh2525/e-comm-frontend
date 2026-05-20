@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Routes,Route } from 'react-router-dom'
 import UserRegister from '../pages/UserRegister'
 import UserLogin from '../pages/UserLogin'
@@ -13,10 +13,14 @@ import Address from '../pages/Address'
 import OrderPage from '../pages/OrderPage'
 import OrderAddress from '../pages/OrderAddress'
 import Profile from '../pages/Profile'
+import Navbar from '../components/Navbar'
 
 const Mroutes = () => {
+   
+  
   return (
     <div>
+       
         <Routes>
             <Route path='/register' element={<UserRegister />} />
             <Route path='/login' element={<UserLogin />} />

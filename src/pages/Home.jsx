@@ -2,17 +2,20 @@ import React, { useState, useEffect, useRef } from "react";
 import ProductCard from "../components/ProductCard";
 import { fetchAllProducts } from "../apis/ProductApis";
 import Subnav from "../components/Subnav";
+import Navbar from "../components/Navbar";
 
 
 
 export default function Home() {
   const [products, setProducts] = useState([]);
+   const [search, setSearch] = useState("")
    const floatRef = useRef(null);
+
 
 
   const getAllProducts = async () => {
     try {
-      const response = await fetchAllProducts();
+      const response = await fetchAllProducts(search);
       if (response) setProducts(response);
     } catch (error) {
       console.log(error);
@@ -23,8 +26,7 @@ export default function Home() {
 
   useEffect(() => {
     getAllProducts();
-  }, []);
-
+  }, [search]);
 
 
   
@@ -49,7 +51,7 @@ export default function Home() {
 
   return (
     <div>
-      
+      <Navbar search={search} setSearch={setSearch}/>
       <Subnav />
 
       {renderCategorySection("mobile", "mobile")}
