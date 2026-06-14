@@ -13,9 +13,9 @@ const Subnav = () => {
   };
 
   return (
-    <div className="bg-[#9810FA] border-t border-white/10 h-10 flex items-center justify-between px-6 text-sm relative">
+    <div className="subnav bg-[#9810FA] border-t border-white/10 h-10 flex items-center justify-between px-6 text-sm relative">
       
-      <div className="flex gap-6 text-gray-300 ml-2 font-medium">
+      <div className="subnav-left flex gap-6 text-gray-300 ml-2 font-medium">
         <button onClick={() => handleScroll("mobile")} className="hover:text-white transition">
           Mobiles
         </button>
@@ -36,7 +36,7 @@ const Subnav = () => {
       {/* My Account */}
       <div
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 cursor-pointer text-gray-300 hover:text-white transition"
+        className="subnav-right flex items-center gap-2 cursor-pointer text-gray-300 hover:text-white transition"
       >
         <User className="w-4 h-4" />
         <span>My Account</span>

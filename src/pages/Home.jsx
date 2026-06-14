@@ -3,6 +3,7 @@ import ProductCard from "../components/ProductCard";
 import { fetchAllProducts } from "../apis/ProductApis";
 import Subnav from "../components/Subnav";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 
 
@@ -38,7 +39,7 @@ export default function Home() {
     if (categoryProducts.length === 0) return null;
 
     return (
-      <section id={id} className="p-6 text-white bg-[#161732]">
+      <section id={id} className="p-6 text-white bg-[#161732] overflow-y-auto">
         <h2 className="text-2xl font-bold mb-4  w-fit capitalize border-b-4 border-blue-500">{category}</h2>
         <div className="grid bg-[] grid-cols- sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {categoryProducts.map((product) => (
@@ -54,11 +55,12 @@ export default function Home() {
       <Navbar search={search} setSearch={setSearch}/>
       <Subnav />
 
-      {renderCategorySection("mobile", "mobile")}
+       {renderCategorySection("mobile", "mobile")}
       {renderCategorySection("clothes", "clothes")}
       {renderCategorySection("electronics", "electronics")}
       {renderCategorySection("laptop", "laptop")}
-      {renderCategorySection("others", "others")}
+      {renderCategorySection("others", "others")} 
+      <Footer />
     </div>
   );
 }

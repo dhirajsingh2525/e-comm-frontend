@@ -44,7 +44,7 @@ const OrderAddress = () => {
 
 
 
-  const subtotal = singleProduct.price.amount * quantity
+  const subtotal = singleProduct?.price?.amount * quantity
  
   const shipping = singleProduct? 10 : 0;
   const fee = singleProduct? 20 : 0;
@@ -97,9 +97,9 @@ const OrderAddress = () => {
 
 
   return (
-    <div className="w-full min-h-screen bg-gray-100 flex items-start justify-center p-4 gap-6">
+    <div className="w-full min-h-screen bg-[#161732]   flex items-start justify-center p-4 gap-6">
     
-      <div className="w-[65%] bg-white shadow-lg rounded-xl p-8">
+      <div className="w-[65%] bg-[#04064b]   shadow-lg rounded-xl p-8">
         <h1 className="text-center text-3xl font-bold mb-4">
           {formData._id ? "Update Delivery Address" : "Add Delivery Address"}
         </h1>
@@ -194,8 +194,8 @@ const OrderAddress = () => {
        
             <div  className="space-y-3">
               <div className="flex justify-between">
-                <span>{singleProduct.title}</span>
-                <span>₹{singleProduct.price.amount}</span>
+                <span>{singleProduct?.title}</span>
+                <span>₹{singleProduct?.price?.amount}</span>
               </div>
             </div>
         

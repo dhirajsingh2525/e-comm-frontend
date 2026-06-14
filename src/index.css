@@ -1,2 +1,260 @@
 @import "tailwindcss";
 
+@media (max-width: 768px) {
+  .cart-items {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-img {
+    width: 80px;
+    height: 80px;
+    align-self: center;
+  }
+
+  .cart-price {
+    width: 100%;
+    text-align: left;
+    margin-top: 10px;
+  }
+
+  .cart-actions {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .checkout-container {
+    flex-direction: column;
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .checkout-form {
+    width: 100% !important;
+    padding: 20px;
+  }
+
+  .order-summary {
+    width: 100% !important;
+  }
+
+  .checkout-form h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .checkout-form form .grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .checkout-form button {
+    width: 100%;
+  }
+
+  .checkout-form .flex.justify-between {
+    flex-direction: column;
+  }
+}
+/* @media (max-width: 768px) {
+
+  .orders-container{
+    flex-direction: column;
+    height: auto !important;
+  }
+
+  .orders-filter,
+  .orders-list{
+    width: 100% !important;
+  }
+
+  .order-card{
+    flex-direction: column !important;
+  }
+
+  .order-products > div{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .order-products img{
+    width: 100px;
+    height: 100px;
+  }
+
+  .order-payment{
+    text-align: left !important;
+    margin-top: 15px;
+  }
+
+  .order-payment button{
+    width: 100% !important;
+  }
+} */
+
+@media (max-width: 768px) {
+    .logout{
+        margin-top: 10px;
+                padding-inline: 3.8rem;
+        padding-block: 1rem;
+    }
+    .subnav-left{
+        display: flex;
+        gap: 5px;
+
+    }
+    .subnav-right{
+        font-size: 10px;
+                display: flex;
+        gap: 3px;
+    }
+
+  .orders-container {
+    padding-inline: 2rem;
+    flex-direction: column;
+    height: auto !important;
+    gap: 15px;
+  }
+
+  .orders-filter,
+  .orders-list {
+    width: 100% !important;
+    padding: 15px !important;
+  }
+  .orders-filter{
+    height: 30vh;
+  }
+
+  .orders-list h2{
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .order-card {
+    padding: 12px !important;
+    gap: 12px !important;
+  }
+
+  /* Product row same line me rahe */
+  .order-products > div {
+    padding-block: 2rem;
+    display: flex;
+    flex-direction: column !important;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .order-products img {
+    width: 70px !important;
+    height: 70px !important;
+    flex-shrink: 0;
+  }
+
+  .order-products h4 {
+    font-size: 14px;
+  }
+
+  .order-products p {
+    font-size: 12px;
+  }
+
+  .order-payment {
+    text-align: left !important;
+    margin-top: 0 !important;
+  }
+
+  .order-payment p {
+    font-size: 13px;
+    margin: 2px 0;
+  }
+
+  .order-payment button {
+    width: 100% !important;
+    padding: 8px !important;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .seller-login-page{
+    padding: 15px;
+  }
+
+  .seller-login-card{
+    width: 95% !important;
+    flex-direction: column;
+    padding: 20px !important;
+    gap: 20px;
+  }
+
+  .seller-login-image{
+    width: 100%;
+  }
+
+  .login-img{
+    width: 100% !important;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  .seller-login-form{
+    width: 100% !important;
+  }
+
+  .seller-login-form h2{
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .seller-login-form input{
+    font-size: 14px;
+  }
+
+  .seller-login-form button{
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+    .login{
+        margin-top: 2rem;
+    }
+    .sell{
+        padding-inline: 4.5rem;
+        padding-block: 1rem;
+    }
+
+  .seller-register{
+    padding: 15px;
+  }
+
+  .seller-register-form{
+    width: 95% !important;
+    padding: 20px !important;
+  }
+
+  .register-inner{
+    width: 100% !important;
+  }
+
+  .register-login-link{
+    width: 100% !important;
+  }
+
+  .seller-register h2{
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .seller-register input{
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .seller-register button{
+    width: 100%;
+    padding: 10px;
+  }
+}

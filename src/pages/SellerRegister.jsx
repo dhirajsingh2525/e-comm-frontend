@@ -25,6 +25,7 @@ const SellerRegister = () => {
         },
         password: data.password,
       };
+      console.log(payload)
 
       const resData = await registerSeller(payload);
 
@@ -39,15 +40,15 @@ const SellerRegister = () => {
 
 
 return (
-    <div className="flex items-center justify-center flex-col min-h-screen bg-purple-700">
+    <div className="seller-register flex items-center justify-center flex-col min-h-screen bg-[#161732]  ">
       <div className="">
-        <h2 className="text-xl font-bold text-center mb-2 text-gray-800">
+        <h2 className="text-xl font-bold text-center mb-2 text-[#7F1068]">
           Register as Seller
         </h2>
       </div>
 
-      <div className="bg-white shadow-lg shadow-purple-600 rounded-2xl p-8 w-[80%] flex items-center justify-center flex-col ">
-        <div className="w-[50%]">
+      <div className="seller-register-form bg-white shadow-lg shadow-purple-600 rounded-2xl p-8 w-[80%] flex items-center justify-center flex-col ">
+        <div className="register-inner w-[50%]">
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
             {/* Username */}
             <div>
@@ -132,7 +133,7 @@ return (
           </form>
         </div>
 
-        <p className="text-center border-1 border-zinc-600 rounded-lg hover:bg-purple-600 py-1 text-sm text-gray-600 mt-4 w-1/2">
+        <p className="register-login-link text-center border-1 border-zinc-600 rounded-lg hover:bg-purple-600 py-1 text-sm text-gray-600 mt-4 w-1/2">
                      <Link to="/seller/login" className="text-yellow-600 hover:text-white">
                       already have  an account
                      </Link>

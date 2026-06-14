@@ -32,7 +32,7 @@ const SellerLogin = () => {
                 if (resData) {
                    dispatch(addSeller(resData.seller))
                   console.log("Login success:", resData.seller);
-                  navigate("/seller")
+                  navigate("/")
                  
                 }
               } catch (err) {
@@ -42,13 +42,13 @@ const SellerLogin = () => {
 
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-yellow-600">
-  <div className="bg-white/30 backdrop-blur-xs flex w-[80%] shadow-yellow-600 p-8 rounded-2xl">
-  <div className=''>
-    <img className='w-1/2' src="https://i.pinimg.com/1200x/92/f2/98/92f2984ebd391d7e8c17a1e3cd673e46.jpg" alt="" />
+    <div className="seller-login-page flex items-center justify-center min-h-screen bg-[#161732]">
+  <div className="seller-login-card bg-[#FFFFFF] backdrop-blur-xs flex w-[80%] shadow-yellow-600 p-8 rounded-2xl">
+  <div className='seller-login-image'>
+    <img className='login-img w-1/2' src="https://i.pinimg.com/1200x/92/f2/98/92f2984ebd391d7e8c17a1e3cd673e46.jpg" alt="" />
   </div>
 
-  <div className='flex flex-col w-1/2'>
+  <div className='seller-login-form flex flex-col w-1/2'>
     <h2 className="text-3xl font-bold text-center mb-4">Login as a Seller</h2>
 
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">

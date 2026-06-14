@@ -185,8 +185,8 @@ export default function UserRegister() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-sky-600 to-blue-700 px-4">
-      <div className="bg-white shadow-2xl rounded-2xl p-8 w-full max-w-lg">
+    <div className="flex items-center justify-center min-h-screen bg-[#161732] px-4 py-8">
+      <div className="bg-white rounded-2xl p-8 w-full max-w-lg">
         {/* Title */}
         <h2 className="text-2xl font-bold text-center mb-6 text-gray-800">
           Create Your Account

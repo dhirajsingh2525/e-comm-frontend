@@ -44,7 +44,7 @@ const Seller = () => {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-r from-emerald-500 to-teal-500 p-6">
+    <div className="min-h-screen flex items-center justify-center bg-[#161732]  p-6">
       <div className="w-full max-w-2xl bg-white rounded-2xl shadow p-8">
         <h2 className="text-2xl font-semibold mb-6">Create Product</h2>
 
@@ -83,7 +83,7 @@ const Seller = () => {
           </div>
 
           <div className="pt-4">
-            <button type="submit" className="w-full bg-blue-600 text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition">
+            <button type="submit" className="w-full bg-[#7F1068] text-white py-2 rounded-lg font-semibold hover:bg-blue-700 transition">
               {loading ? 'Creating...' : 'Create Product'}
             </button>
           </div>

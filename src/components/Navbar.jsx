@@ -88,7 +88,7 @@ const Navbar = ({search, setSearch}) => {
           { !seller && !isSellerLoggedin ? (
                 <Link
               to="/seller/login"
-              className="bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white px-4 py-2 rounded-xl font-medium transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              className="bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white px-4 py-2 rounded-xl font-medium"
             >
               Sell on MarketPlace
             </Link>
@@ -178,7 +178,7 @@ const Navbar = ({search, setSearch}) => {
             ) : (
                    <Link
               to="/seller"
-              className="bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white px-4 py-2 rounded-xl font-medium transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              className="sell bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white px-4 py-2 rounded-xl font-medium transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
             >
               Sell
             </Link>
@@ -189,16 +189,16 @@ const Navbar = ({search, setSearch}) => {
             {!loggedin && !user ? (
               <Link
                 to="/login"
-                className="bg-white text-slate-900 px-6 py-2 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center space-x-2"
+                className="login bg-white text-slate-900 px-6 py-2 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center space-x-2"
               >
                 <User className="w-4 h-4" />
                 <span>Login</span>
               </Link>
             ) : (
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-4 mt-4">
                 <button
                   onClick={logoutUser}
-                  className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-xl font-medium transition-all duration-200 shadow-lg hover:shadow-xl"
+                  className="logout bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-xl font-medium transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
                   Logout
                 </button>

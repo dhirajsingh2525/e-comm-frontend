@@ -120,9 +120,9 @@ const ProductDetailPage = () => {
   
 
   return (
-    <div className="min-h-screen bg-gray-50 py-8">
+    <div className="min-h-screen bg-[#161732]  py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+        <div className="bg-[#161732] text-white  rounded-2xl shadow-xl overflow-hidden">
           <div className="lg:flex">
             <div className="lg:w-1/2 p-8">
               <div className="relative">
@@ -186,7 +186,7 @@ const ProductDetailPage = () => {
               <div className="flex flex-col h-full">
          
                 <div className="mb-6">
-                  <h1 className="text-3xl font-bold text-gray-900 mb-3">{productDets?.title}</h1> 
+                  <h1 className="text-3xl font-bold text-zinc-300 mb-3">{productDets?.title}</h1> 
             
                   <div className="flex items-center gap-2 mb-4">
                     <div className="flex items-center">
@@ -200,10 +200,10 @@ const ProductDetailPage = () => {
                     <span className="text-gray-600">(4.2) · 156 reviews</span>
                   </div>
 
-                  <div className="bg-gray-50 rounded-lg p-4 mb-6">
-                    <p className="text-sm text-gray-600">Sold by</p>
-                    <p className="font-semibold text-gray-900">Seller ID: 548t8tn4h884</p>
-                    <div className="flex items-center gap-4 mt-2 text-sm text-gray-600">
+                  <div className="bg-[#7F1068] rounded-lg p-4 mb-6">
+                    <p className="text-sm text-zinc-300">Sold by</p>
+                    <p className="font-semibold text-zinc-300">Seller ID: 548t8tn4h884</p>
+                    <div className="flex items-center gap-4 mt-2 text-sm text-zinc-300">
                       <span className="flex items-center gap-1">
                         <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                         Verified Seller
@@ -213,7 +213,7 @@ const ProductDetailPage = () => {
                   </div>
 
                   <div className="flex items-baseline gap-3 mb-6">
-                    <span className="text-3xl font-bold text-gray-900">{totalPrice}</span>
+                    <span className="text-3xl font-bold text-zinc-300">{totalPrice}</span>
                     {productDets?.price.original && productDets?.price.original > productDets?.price.current && (
                       <span className="text-xl text-gray-500 line-through">${productDets?.price.original}</span>
                     )}
@@ -264,12 +264,12 @@ const ProductDetailPage = () => {
 
                   <button 
                    onClick={handlePayment}
-                  className="w-full bg-gray-900 hover:bg-gray-800 text-white py-3 px-6 rounded-lg font-semibold transition-colors">
+                  className="w-full bg-[#f314c6d4]  hover:bg-gray-800 text-white py-3 px-6 rounded-lg font-semibold transition-colors">
                     Pay Now
                   </button>
                    <button 
                    onClick={handleOrder}
-                  className="w-full bg-gray-900 hover:bg-gray-800 text-white py-3 px-6 rounded-lg font-semibold transition-colors">
+                  className="w-full bg-[#7F1068]  hover:bg-gray-800 text-white py-3 px-6 rounded-lg font-semibold transition-colors">
                     Order Now
                   </button>
                 </div>

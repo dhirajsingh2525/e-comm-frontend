@@ -61,9 +61,9 @@ const Profile = () => {
   }
 
   return (
-    <div className="flex flex-col md:flex-row max-w-6xl mx-auto p-6 gap-8">
+    <div className="profile flex flex-col min-h-screen w-full md:flex-row bg-[#161732]  mx-auto p-6 gap-8">
       {/* Side Navigation */}
-      <div className="w-full md:w-64 bg-white shadow-xl rounded-2xl p-6 space-y-6">
+      <div className="w-full md:w-64 bg-[#7F1068] text-zinc-300 shadow-xl rounded-2xl p-6 space-y-6">
         <div className="flex flex-col items-center">
           <img
             src="https://via.placeholder.com/100"
@@ -76,28 +76,28 @@ const Profile = () => {
         </div>
 
         <div className="space-y-2">
-          <p className="font-semibold text-gray-700 mt-4">MY ORDERS</p>
-          <Link to="/order-page" className="w-full text-left text-gray-600 hover:text-blue-600">
+          <p className="font-semibold text-zinc-300 mt-4">MY ORDERS</p>
+          <Link to="/order-page" className="w-full text-left text-zinc-300 hover:text-blue-600">
             Your Orders
           </Link>
 
-          <p className="font-semibold text-gray-700 mt-4">ACCOUNT SETTINGS</p>
-          <button className="w-full text-left text-gray-600 hover:text-blue-600">
+          <p className="font-semibold text-zinc-300 mt-4">ACCOUNT SETTINGS</p>
+          <button className="w-full text-left text-zinc-300 hover:text-blue-600">
             Profile Information
           </button>
-          <Link to="/address" className="w-full text-left text-gray-600 hover:text-blue-600">
+          <Link to="/address" className="w-full text-left text-zinc-300 hover:text-blue-600">
             Manage Addresses
           </Link>
 
-          <p className="font-semibold text-gray-700 mt-4">MY STUFF</p>
-          <button className="w-full text-left text-gray-600 hover:text-red-600 mt-2">
+          <p className="font-semibold text-zinc-300 mt-4">MY STUFF</p>
+          <button className="w-full text-left text-zinc-300 hover:text-red-600 mt-2">
             Logout
           </button>
         </div>
       </div>
 
       {/* Main Profile Content */}
-      <div className="flex-1 bg-white shadow-xl rounded-2xl p-6 space-y-6">
+      <div className="flex-1 bg-zinc-300 shadow-xl rounded-2xl p-6 space-y-6">
         <h2 className="text-2xl font-bold text-gray-800">Personal Information</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -108,7 +108,7 @@ const Profile = () => {
               name="firstName"
               value={users.firstName}
               onChange={handleChange}
-              className="w-full border border-gray-300 rounded-lg p-2 mt-1 focus:ring-2 focus:ring-blue-300"
+              className="w-full border border-zinc-700 rounded-lg p-2 mt-1 focus:ring-2 focus:ring-blue-300"
             />
           </div>
           <div>
@@ -118,7 +118,7 @@ const Profile = () => {
               name="lastName"
               value={users.lastName}
               onChange={handleChange}
-              className="w-full border border-gray-300 rounded-lg p-2 mt-1 focus:ring-2 focus:ring-blue-300"
+              className="w-full border border-zinc-700 rounded-lg p-2 mt-1 focus:ring-2 focus:ring-blue-300"
             />
           </div>
         </div>
@@ -133,7 +133,7 @@ const Profile = () => {
                 value="male"
                 checked={users.gender === "male"}
                 onChange={handleChange}
-                className="accent-blue-600"
+                className="accent-blue-600 border-zinc-700"
               />
               Male
             </label>
@@ -144,7 +144,7 @@ const Profile = () => {
                 value="female"
                 checked={users.gender === "female"}
                 onChange={handleChange}
-                className="accent-pink-500"
+                className="accent-pink-500 border-zinc-700"
               />
               Female
             </label>
@@ -159,7 +159,7 @@ const Profile = () => {
               name="email"
               value={users.email}
               onChange={handleChange}
-              className="w-full border border-gray-300 rounded-lg p-2 mt-1 focus:ring-2 focus:ring-blue-300"
+              className="w-full border border-zinc-700 rounded-lg p-2 mt-1 focus:ring-2 focus:ring-blue-300"
             />
           </div>
           <div>
@@ -169,7 +169,7 @@ const Profile = () => {
               name="phone"
               value={users.phone}
               onChange={handleChange}
-              className="w-full border border-gray-300 rounded-lg p-2 mt-1 focus:ring-2 focus:ring-blue-300"
+              className="w-full border border-zinc-700 rounded-lg p-2 mt-1 focus:ring-2 focus:ring-blue-300"
             />
           </div>
         </div>

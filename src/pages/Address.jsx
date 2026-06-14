@@ -6,8 +6,9 @@ import { useNavigate } from "react-router-dom";
 
 const Address = () => {
   const { items } = useSelector((state) => state.cartSlice);
-   const user = useSelector((state) => state.auth);
-   const navigate = useNavigate();
+  const user = useSelector((state) => state.auth);
+  const navigate = useNavigate();
+
 
   const [formData, setFormData] = useState({
     fullName: "",
@@ -19,13 +20,14 @@ const Address = () => {
     fullAddress: "",
   });
 
-
   useEffect(() => {
     const fetchAddress = async () => {
       try {
-        const res = await axiosInstance.get("/api/user/address", { withCredentials: true });
+        const res = await axiosInstance.get("/api/user/address", {
+          withCredentials: true,
+        });
         if (res.data.address) {
-          setFormData(res.data.address); 
+          setFormData(res.data.address);
         }
       } catch (error) {
         console.log("No existing address", error);
@@ -39,31 +41,31 @@ const Address = () => {
   const fee = items.length > 0 ? 20 : 0;
   const total = subtotal + shipping + fee;
 
+  const createOrder = async () => {
+    const payload = {
+      userId: user?.user?._id,
+      products: items?.map((item) => ({
+        productId: item?.product_id,
+        quantity: item?.quantity,
+      })),
+    };
 
-    const createOrder = async () => {
-     const payload = {
-      userId: user.user._id,
-      products: items.map((item) => ({
-         productId: item.product_id,
-         quantity: item.quantity
-      }))
-     }
-  
-     const res = await orderProduct(payload)
-     if(res){
-      navigate("/order-page", { state: {total: total}})
-     }
-  }
+    const res = await orderProduct(payload);
+    if (res) {
+      navigate("/order-page", { state: { total: total } });
+    }
+  };
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
- 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axiosInstance.post("/api/user/address", formData, { withCredentials: true });  
+      const res = await axiosInstance.post("/api/user/address", formData, {
+        withCredentials: true,
+      });
       alert(res.data.message);
     } catch (error) {
       console.log(error);
@@ -71,9 +73,8 @@ const Address = () => {
   };
 
   return (
-    <div className="w-full min-h-screen bg-zinc-100 flex items-start justify-center p-4 gap-6">
-    
-      <div className="w-[65%] bg-zinc-300 shadow-lg rounded-xl p-8">
+    <div className="checkout-container w-full min-h-screen bg-[#161732]   flex items-start justify-center p-4 gap-6">
+      <div className="checkout-form  w-[65%] bg-zinc-300 shadow-lg rounded-xl p-8">
         <h1 className="text-center text-3xl font-bold mb-4">
           {formData._id ? "Update Delivery Address" : "Add Delivery Address"}
         </h1>
@@ -161,12 +162,11 @@ const Address = () => {
         </form>
       </div>
 
-   
-      <div className="w-[30%] bg-zinc-300 shadow-lg rounded-xl p-6 flex flex-col justify-between">
+      <div className="order-summary w-[30%] bg-zinc-300 shadow-lg rounded-xl p-6 flex flex-col justify-between">
         <div>
           <h2 className="text-2xl font-semibold mb-4">Order Summary</h2>
-          {items.map((item) => (
-            <div key={item._id} className="space-y-3">
+          {items.map((item,index) => (
+            <div key={index} className="space-y-3">
               <div className="flex justify-between">
                 <span>{item.title}</span>
                 <span>₹{item.price}</span>
@@ -190,17 +190,15 @@ const Address = () => {
             <span>₹{total}</span>
           </div>
         </div>
-        <button 
-        onClick={createOrder}
-        className="mt-6 w-full bg-red-600 text-white py-3 rounded-lg font-semibold hover:bg-red-700">
+        <button
+          onClick={createOrder}
+          className="mt-6 w-full bg-red-600 text-white py-3 rounded-lg font-semibold hover:bg-red-700"
+        >
           Place Order
         </button>
       </div>
     </div>
-    
   );
 };
 
 export default Address;
-
-
