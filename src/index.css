@@ -56,42 +56,6 @@
     flex-direction: column;
   }
 }
-/* @media (max-width: 768px) {
-
-  .orders-container{
-    flex-direction: column;
-    height: auto !important;
-  }
-
-  .orders-filter,
-  .orders-list{
-    width: 100% !important;
-  }
-
-  .order-card{
-    flex-direction: column !important;
-  }
-
-  .order-products > div{
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .order-products img{
-    width: 100px;
-    height: 100px;
-  }
-
-  .order-payment{
-    text-align: left !important;
-    margin-top: 15px;
-  }
-
-  .order-payment button{
-    width: 100% !important;
-  }
-} */
-
 @media (max-width: 768px) {
     .logout{
         margin-top: 10px;

@@ -5,8 +5,7 @@ import { setError } from "../reducers/errorSlice";
 
 
 export const axiosInstance = axios.create({
-    // baseURL: "https://e-comm-backend-2-u9c3.onrender.com/",
-    baseURL: "http://localhost:3000/",
+    baseURL: "https://e-comm-backend-2-u9c3.onrender.com/",
     withCredentials: true 
 })
 
